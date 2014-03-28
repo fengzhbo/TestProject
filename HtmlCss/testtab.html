@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Tab</title>
+    <style type="text/css">
+    
+    #tabcon1,#tabcon2{width: 200px;height: 100px;border: 1px solid #ccc;}
+    </style>
+</head>
+    
+<body>
+    
+<div>
+<span id="tabbtn1" style="background-color:#ccc;">tab button1</span>
+<span id="tabbtn2">tab button2</span>
+</div>
+    
+<div id="tabcon1">tab content1</div>
+<div id="tabcon2" style="display:none;">tab content2</div>
+
+<script type="text/javascript">
+
+    var tabbtn1 = document.getElementById("tabbtn1");
+    var tabbtn2 = document.getElementById("tabbtn2");
+    var tabcon1 = document.getElementById("tabcon1");
+    var tabcon2 = document.getElementById("tabcon2");
+    
+    tabbtn1.onmouseover = tabbtn1over;
+    tabbtn2.onmouseover = tabbtn2over;
+        
+    function tabbtn1over(){
+        
+        tabcon1.style.display="block";
+        tabcon2.style.display="none";
+        tabbtn1.style.backgroundColor="#ccc";
+        tabbtn2.style.backgroundColor="#fff";
+        
+    
+    }
+    
+    function tabbtn2over(){
+    
+        tabcon1.style.display="none";   
+        tabcon2.style.display="block";
+        tabbtn1.style.backgroundColor="#fff";
+        tabbtn2.style.backgroundColor="#ccc";
+    
+    }
+    
+    
+</script>
+</body>
+</html>

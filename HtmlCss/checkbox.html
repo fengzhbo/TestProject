@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>checkbox</title>
+</head>
+<body>
+<input type="checkbox" id="testInput" />
+<label for="testInput"></label>
+
+    <style type="text/css">
+
+        input{display:none;}
+        label{border:1px solid #ccc;display:inline-block;border-radius:5px;padding:18px;position:relative;}
+        input:checked + label{background-color:#ccc;}
+        input:checked + label:after{content:'\2714';font-size:30px;position:absolute;top:0px;left:6px;}
+
+
+    </style>
+</body>
+</html>

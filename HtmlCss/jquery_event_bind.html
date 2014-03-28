@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jquery event_on_test</title>
+</head>
+
+<body>
+    <input type="button" value="原有按钮" class="clickBtn" />
+
+    <br/>
+    <br/>
+
+    <input type="button" value="新加一个按钮" id="btnAdd" />
+
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        var clickBtn = $(".clickBtn");
+        
+        clickBtn.bind("click",function(){
+        
+            alert($(this).val());
+        
+        });
+        
+        $("#btnAdd").click(function(){
+                    
+            clickBtn.after('<input type="button" value="新插入的按钮按钮" class="clickBtn" />');
+            
+        });
+    </script>
+</body>
+
+</html>

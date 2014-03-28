@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+</head>
+
+<body>
+    <h1>test page</h1>
+
+    <input type="button" value="click" id="testBtn" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $("#testBtn").bind("custom",function(e,dd){
+        
+            alert(dd.t);
+            
+        });
+        
+        $("#testBtn").trigger("custom",{t:"123"});
+    </script>
+</body>
+
+</html>
